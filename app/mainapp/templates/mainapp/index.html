@@ -1,0 +1,414 @@
+{% extends 'mainapp/base.html'%}
+{% load static %}
+
+{% block 'content' %}
+
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+</div>
+
+<div class="container-fluid bg-dark text-white-50 py-2 px-0 d-none d-lg-block">
+    <div class="row gx-0 align-items-center">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center me-4">
+                <small class="fa fa-phone-alt me-2"></small>
+                <small><a href="tel:+79151080104">8 (915) 108-01-04</a></small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center me-4">
+                <small class="far fa-envelope-open me-2"></small>
+                <small><a href="mailto:sharov-a83@mail.ru">sharov-a83@mail.ru</a></small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center me-4">
+                <small class="far fa-clock me-2"></small>
+                <small>Пн - Пт : 09:00 - 21:00</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="text-white-50 ms-4" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-4" href=""><i class="fab fa-whatsapp"></i></a>
+                <a class="text-white-50 ms-4" href=""><i class="fab fa-telegram"></i></a>
+                <a class="text-white-50 ms-4" href=""><i class="fab fa-vk"></i></a>
+                <a class="text-white-50 ms-4" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+            <img class="img-fluid me-3" src="{% static 'img/logo.svg' %}" alt=""/>
+            Название
+        </h1>
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Главная</a>
+            <a href="about.html" class="nav-item nav-link">Кондиционирование</a>
+            <a href="service.html" class="nav-item nav-link">Вентиляция</a>
+            <a href="service.html" class="nav-item nav-link">Увлажнение</a>
+            <a href="service.html" class="nav-item nav-link">Наши услуги</a>
+            <a href="service.html" class="nav-item nav-link">Портфолио</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Выпадающее меню</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Пункт 1</a>
+                    <a href="appointment.html" class="dropdown-item">Пункт 2</a>
+                    <a href="team.html" class="dropdown-item">Пункт 3</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Контакты</a>
+        </div>
+    </div>
+
+</nav>
+
+<div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100 main-img" src="{% static 'img/cond-1.png' %}" alt="Image"/>
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <h1 class="display-3 text-dark mb-4 animated slideInDown">
+                                    Проектирование и монтаж систем кондецинирования
+                                </h1>
+                                <p class="fs-5 text-body mb-5">
+                                    Монтаж вентиляции, увлажнения и кондиционирования в квартирах и
+                                    коттеджах от проектирования до запуска оборудования
+                                </p>
+                                <a href="" class="btn btn-primary py-3 px-5">Бесплатная консультация</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto" style="max-width: 1000px">
+            <h1 class="display-6 mb-5">Системы канального кондиционирования</h1>
+            <p>Впишем системы кондиционирования и вентиляции в дизайн вашей квартиры или дома</p>
+            <p>В комнатах будут видны только вентиляционные решетки, тип которых вы можете выбрать с учетом ваших
+                предпочтений и дизайнерских решений</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded">
+                    <img class="img-fluid" src="{% static 'img/room-2.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span>Максимально сохраним высоту потолков в комнатах</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item rounded">
+                    <img class="img-fluid" src="{% static 'img/equip.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span>Размещаем оборудование в технических помещениях.
+Оборудование и воздуховоды скрыты за потолком и в стенах</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded">
+                    <img class="img-fluid" src="{% static 'img/draft.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span>Климатические системы проектируются с учетом расположения мебели и дизайна будущих помещений</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item rounded">
+                    <img class="img-fluid" src="{% static 'img/engineer-meeting.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span>Расположение оборудования и видимых элементов, трассировка воздуховодов согласовываются с дизайнером и Заказчиком</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid overflow-hidden my-5 px-lg-0">
+    <div class="container facts px-lg-0">
+        <div class="row g-0 mx-lg-0">
+
+            <div class="col-lg-12 facts-counter wow fadeIn pr-0" data-wow-delay="0.5s">
+                <div class="h-100 px-4 pe-lg-0">
+                    <div class="row g-5 plf-10">
+                        <div class="col-sm-3 ta-c">
+                            <h1 class="display-5">Прозрачно</h1>
+                            <p class="fs-5 text-primary">Фиксируем цену и сроки в договоре</p>
+                        </div>
+                        <div class="col-sm-3 ta-c">
+                            <h1 class="display-5">Быстро</h1>
+                            <p class="fs-5 text-primary">Коммерческое предложение в 2-3х вариантах за 2 рабочих дня</p>
+                        </div>
+                        <div class="col-sm-3 ta-c">
+                            <h1 class="display-5">Надежно</h1>
+                            <p class="fs-5 text-primary">Гарантия на монтаж не менее срока гарантии на оборудование</p>
+                        </div>
+                        <div class="col-sm-3 ta-c">
+                            <h1 class="display-5">Качественно</h1>
+                            <p class="fs-5 text-primary">Тройной контроль качества</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="display-6 mb-5">Часто задаваемые вопросы:</h1>
+
+                <div class="row g-3">
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="bg-light rounded h-100 p-3">
+                            <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                <img class="align-self-center mb-3" src="{% static 'img/icon/icon-06-primary.png' %}"
+                                     alt=""/>
+                                <h5 class="mb-0">Первый вопрос?</h5>
+                                <p class="mb-4 answer">
+                                    <br>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                                    lorem sit clita duo justo magna dolore erat amet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="bg-light rounded h-100 p-3">
+                            <div class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
+                                <img class="align-self-center mb-3" src="{% static 'img/icon/icon-03-primary.png' %}"
+                                     alt=""/>
+                                <h5 class="mb-0">Второй вопрос?</h5>
+                                <p class="mb-4 answer">
+                                    <br>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                                    lorem sit clita duo justo magna dolore erat amet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="bg-light rounded h-100 p-3">
+                            <div class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
+                                <img class="align-self-center mb-3" src="{% static 'img/icon/icon-04-primary.png' %}"
+                                     alt=""/>
+                                <h5 class="mb-0">Третий вопрос?</h5>
+                                <p class="mb-4 answer">
+                                    <br>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                                    lorem sit clita duo justo magna dolore erat amet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="bg-light rounded h-100 p-3">
+                            <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                <img class="align-self-center mb-3" src="{% static 'img/icon/icon-07-primary.png' %}"
+                                     alt=""/>
+                                <h5 class="mb-0">Четвертый вопрос?</h5>
+                                <p class="mb-4 answer">
+                                    <br>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+                                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                                    lorem sit clita duo justo magna dolore erat amet
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px">
+                    <img class="position-absolute w-100" src="{% static 'img/feature.jpg' %}" alt="" style="object-fit: cover; height: 470px;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto" style="max-width: 1000px">
+            <h1 class="display-6 mb-5">Официальный дилер ведущих производителей</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded mx-auto mb-4" src="{% static 'img/logo_c_13.jpg' %}" alt=""/>
+
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded mx-auto mb-4" src="{% static 'img/logo_c_11.jpg' %}" alt=""/>
+
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded mx-auto mb-4" src="{% static 'img/logo_c_12.jpg' %}" alt=""/>
+
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded mx-auto mb-4" src="{% static 'img/logo_c_10.png' %}" alt=""/>
+
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid rounded mx-auto mb-4" src="{% static 'img/logo_c_1.png' %}" alt=""/>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto" style="max-width: 500px">
+            <h1 class="display-6 mb-5">Наши услуги</h1>
+            <h3>Комплексная реализация проектов</h3>
+            <p>Мы предлагаем комплексное решение по проектированию, поставке и монтажу систем кондиционирования любой степени сложности.
+            Основные этапы:</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded h-100 p-5">
+                    <div class="d-flex align-items-center ms-n5 mb-4">
+                        <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                            <img class="img-fluid" src="{% static 'img/icon/icon-10-light.png' %}" alt=""/>
+                        </div>
+                        <h4 class="mb-0">Проектирование</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded h-100 p-5">
+                    <div class="d-flex align-items-center ms-n5 mb-4">
+                        <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                            <img class="img-fluid" src="{% static 'img/icon/icon-01-light.png' %}" alt=""/>
+                        </div>
+                        <h4 class="mb-0">Комплектация</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded h-100 p-5">
+                    <div class="d-flex align-items-center ms-n5 mb-4">
+                        <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                            <img class="img-fluid" src="{% static 'img/icon/icon-05-light.png' %}" alt=""/>
+                        </div>
+                        <h4 class="mb-0">Монтаж и ПРН</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded h-100 p-5">
+                    <div class="d-flex align-items-center ms-n5 mb-4">
+                        <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                            <img class="img-fluid" src="{% static 'img/icon/icon-05-light.png' %}" alt=""/>
+                        </div>
+                        <h4 class="mb-0">Гарантийное обслуживание</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded h-100 p-5">
+                    <div class="d-flex align-items-center ms-n5 mb-4">
+                        <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                            <img class="img-fluid" src="{% static 'img/icon/icon-05-light.png' %}" alt=""/>
+                        </div>
+                        <h4 class="mb-0">Сервис и ТО</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <h1 class="display-6 mb-5">
+              Свяжитесь с нами
+            </h1>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="Имя"/>
+                    <label for="name">Имя</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Email"/>
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="subject" placeholder="Тема"/>
+                    <label for="subject">Тема</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Напишите сообщение ..." id="message" style="height: 100px"></textarea>
+                    <label for="message">Сообщение</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary py-3 px-5" type="submit">
+                    Отправить сообщение
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px">
+              <div class="position-relative rounded overflow-hidden h-100">
+                  <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
+                  <a href="https://yandex.ru/maps/213/moscow/stops/1727699131/?ll=37.763530%2C55.721102&tab=overview&utm_medium=mapframe&utm_source=maps&z=14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Новохохловская — Яндекс Карты</a>
+                  <iframe src="https://yandex.ru/map-widget/v1/?ll=37.763530%2C55.721102&masstransit%5BstopId%5D=1727699131&mode=masstransit&tab=overview&z=14" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
