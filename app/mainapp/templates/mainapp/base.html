@@ -9,7 +9,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="{% static 'img/logo.svg' %}" rel="icon" />
+    <link href="{% static 'img/logo.png' %}" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +19,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
 
     <!-- Libraries Stylesheet -->
     <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
@@ -32,6 +33,13 @@
   </head>
 
   <body>
+
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    {% include 'mainapp/include/top-menu.html'%}
+    {% include 'mainapp/include/menu.html'%}
 
   {% block 'content' %}
   {% endblock %}
@@ -55,8 +63,8 @@
           </div>
           <div class="col-lg-6 col-md-6">
             <h5 class="text-light mb-4">Адресс</h5>
-            <p><i class="fa fa-map-marker-alt me-3"></i>Адрес</p>
-            <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+79151080104">8 (915) 108-01-04</a></p>
+            <p><i class="fa fa-map-marker me-3"></i>Адрес</p>
+            <p><i class="fa fa-phone me-3"></i><a href="tel:+79151080104">8 (915) 108-01-04</a></p>
             <p><i class="fa fa-envelope me-3"></i><a href="mailto:sharov-a83@mail.ru">sharov-a83@mail.ru</a></p>
           </div>
         </div>

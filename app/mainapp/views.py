@@ -9,6 +9,10 @@ class MainListView(ListView):
     model = User
     template_name = 'mainapp/index.html'
 
+class ContactListView(ListView):
+    model = User
+    template_name = 'mainapp/contact.html'
+
 
 class EmailView(View):
     def get(self, request):

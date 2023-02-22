@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #015FC9;
-    --secondary: #0DD3F1;
+    --primary: #296c9d;
+    --secondary: #296c9d;
     --light: #F6F7FC;
     --dark: #15233C;
 }
@@ -39,12 +39,15 @@
 .btn.btn-outline-primary:hover,
 .btn.btn-secondary,
 .btn.btn-outline-secondary:hover {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
-
+.btn.btn-primary {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
 .btn.btn-primary:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
+    background: #296c9dc2 !important;
+    border-color: #296c9dc2 !important;
 }
 
 .btn.btn-secondary:hover {
@@ -187,8 +190,9 @@
 }
 
 .page-header {
-    background: url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../img/contact-back.jpg) center center no-repeat;
     background-size: cover;
+    background-position-y: 60%;
 }
 
 .page-header .breadcrumb-item,
@@ -248,7 +252,7 @@
 }
 
 .container.facts .facts-counter {
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url(../img/build-2.jpg) center right no-repeat;
+    background: linear-gradient(#939ba1a8, #fffffff2), url(../img/build-2.jpg) center right no-repeat;
     background-size: cover;
 }
 
@@ -502,4 +506,225 @@
     object-fit: cover;
     height: 90vh;
 ;
+}
+
+/* Базовые стили слоя затемнения и модального окна  */
+.overlay {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1;
+visibility: hidden;
+/* фон затемнения */
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+position: fixed; /* фиксированное поцизионирование */
+cursor: default; /* тип курсара */
+-webkit-transition: opacity .5s;
+-moz-transition: opacity .5s;
+-ms-transition: opacity .5s;
+-o-transition: opacity .5s;
+transition: opacity .5s;
+}
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+.is-image {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display:block;
+margin: 10&;
+width: 100%;
+height: auto;
+/* скругление углов встроенных картинок */
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+border-radius: 4px;
+}
+/* встроенные элементы м-медиа, фреймы */
+embed, iframe {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display:block;
+margin: auto;
+min-width: 320px;
+max-width: 600px;
+width: 100%;
+}
+.popup h1 { /* заголовок 1 */
+color: #008000;
+text-align: left;
+text-shadow: 0 1px 3px rgba(0,0,0,.3);
+font:24px 'Trebuchet MS', Helvetica, sans-serif;
+font-weight: bold;
+}
+.popup h2 { /* заголовок 2 */
+color: #008000;
+text-align: left;
+text-shadow: 0 1px 3px rgba(0,0,0,.3);
+font:22px 'Trebuchet MS', Helvetica, sans-serif;
+}
+/*** Формируем стили модального окна ***/
+.popup {
+    background-image:linear-gradient(90deg, #253a5ce8, #f9f8f86b, rgba(255,255,255,1) 100%), url(../img/connect-2.jpg);
+    background-size: cover;
+    background-position-x: center;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    z-index: 10;
+    display: flex;
+    visibility: hidden;
+    margin: 0 auto;
+    width: 90%;
+    min-width: 320px;
+    max-width: 600px;
+    /* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 30px;
+    border: 1px solid #383838;
+    /* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    /* внешняя тень блока */
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+    /* полная прозрачность окна, появление при клике */
+    opacity: 0;
+    /* эффект перехода (появление) */
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+}
+.popup span{
+    color: black;
+    margin: auto;
+}
+/* активируем появление окна и затемнение фона */
+.overlay:target+.popup {
+    top: 20%; /* положение окна от верха страницы при появлении */
+    visibility: visible;
+    opacity: 1; /* убираем прозрачность */
+}
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;padding: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 50%;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 20px;
+    /* задаём значения и эффект перехода при наведении */
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+}
+.close:hover {
+    background-color: #2b6d9dd1;
+    /* крутим кнопку при наведении */
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+/* опционально при добавлении вложений */
+.popup p, .popup div {
+    margin-bottom: 10px;
+}
+.row-flex{
+    object-fit: cover;
+    flex: 0 0 50%;
+}
+
+.form-floating label{
+    color: #808897;
+}
+.free-serv{
+    display: flex;
+    width: 60vw;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    margin-left: 35%;
+    background: #144d76a3;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 10%;
+    font-weight: 500;
+}
+.type-serv{
+    display: flex;
+}
+.serv{
+    flex: 0 0 25%;
+    text-align: center;
+    border-left: solid;
+    font-size: 20px;
+    padding: 20px 15px;
+    display: flex;
+}
+.header-serv{
+    margin-bottom: 2%;
+    font-size: 25px;
+}
+a {
+    color: #80bbff;
+}
+.hightlight-main{
+    color: var(--primary)
+}
+.serv-icon{
+    margin: auto;
+}
+.serv-txt{
+    margin: auto;
+}
+.steps{
+    color: #15233c;
+    font-size: 28px;
+    font-weight: 500;
+}
+.bg-primary {
+    background-color: #13446882 !important;
+}
+.text-primary {
+    color: #1a4d87 !important;
 }
