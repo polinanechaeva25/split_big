@@ -11,8 +11,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
-            <a href="{% url 'mainapp:index' %}" class="nav-item nav-link active">Главная</a>
-            <a href="about.html" class="nav-item nav-link">Кондиционирование</a>
+            <a href="{% url 'mainapp:index' %}" class="nav-item nav-link {% if request.resolver_match.view_name == 'mainapp:index'%} active {% endif %}">Главная</a>
+            <a href="{% url 'mainapp:conditioner' %}" class="nav-item nav-link {% if request.resolver_match.view_name == 'mainapp:conditioner'%} active {% endif %}">Кондиционирование</a>
             <a href="service.html" class="nav-item nav-link">Вентиляция</a>
             <a href="service.html" class="nav-item nav-link">Увлажнение</a>
 <!--            <a href="service.html" class="nav-item nav-link">Наши услуги</a>-->
@@ -25,7 +25,7 @@
                     <a href="team.html" class="dropdown-item">Увлажнение</a>
                 </div>
             </div>
-            <a href="{% url 'mainapp:contact' %}" class="nav-item nav-link">Контакты</a>
+            <a href="{% url 'mainapp:contact' %}" class="nav-item nav-link {% if request.resolver_match.view_name == 'mainapp:contact'%} active {% endif %}">Контакты</a>
         </div>
     </div>
 

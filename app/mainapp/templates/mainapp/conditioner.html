@@ -1,0 +1,66 @@
+{% extends 'mainapp/base.html'%}
+{% load static %}
+
+{% block 'content' %}
+<div class="container-fluid page-header-conditioner py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <h1 class="display-4 animated slideInDown mb-4">Кондиционирование</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'mainapp:index' %}">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Кондиционирование</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto" style="max-width: 1000px">
+            <h1 class="display-6 mb-5">Системы канального кондиционирования</h1>
+            <p>Впишем системы кондиционирования и вентиляции в дизайн вашей квартиры или дома</p>
+            <p>В комнатах будут видны только вентиляционные решетки, тип которых вы можете выбрать с учетом ваших
+                предпочтений и дизайнерских решений</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item rounded">
+                    <img class="img-fluid img-fluid-extra" src="{% static 'img/room-2.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span class="fw-500">Максимально сохраним высоту потолков в комнатах</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item rounded">
+                    <img class="img-fluid img-fluid-extra" src="{% static 'img/equipment.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span class="fw-500">Размещаем оборудование в технических помещениях.
+                              Оборудование и воздуховоды скрыты за потолком и в стенах
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item rounded">
+                    <img class="img-fluid img-fluid-extra" src="{% static 'img/draft.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span class="fw-500">Климатические системы проектируются с учетом расположения мебели и дизайна будущих помещений</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item rounded">
+                    <img class="img-fluid img-fluid-extra" src="{% static 'img/engineer-meeting.jpg' %}" alt=""/>
+                    <div class="text-center p-4">
+                        <span class="fw-500">Расположение оборудования и видимых элементов, трассировка воздуховодов согласовываются
+                            с дизайнером и Заказчиком
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
